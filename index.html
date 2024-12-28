@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<style>
+    .swiper-pagination-bullet {
+        background-color: #888;
+        width: 20px;
+        height: 3px;
+        border-radius: 1px;
+        opacity: 0.7;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #ffffff;
+        opacity: 1;
+        width: 25px;
+    }
+
+    .swiper-pagination-dynamic .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: #ccc;
+    }
+
+    .swiper-pagination-bullet:hover {
+        background-color: #ffffff;
+    }
+</style>
+
+<body>
+
+    <!-- <div style="background-color: #f8f9fa;">
+        <div class="my-padding top-info-bar">
+            <div class="top-left">
+                <p> <ion-icon name="mail-outline"></ion-icon> info@SaylaniWelfare.com</p>
+                <p> <ion-icon name="mail-outline"></ion-icon> info@SaylaniWelfare.com</p>
+                <p> <ion-icon name="mail-outline"></ion-icon> info@SaylaniWelfare.com</p>
+                <p> <ion-icon name="mail-outline"></ion-icon> info@SaylaniWelfare.com</p>
+            </div>
+            <div class="top-right"></div>
+        </div>
+    </div> -->
+
+    <section class="custom-nav-bg">
+        <nav class="navbar navbar-expand-lg navbar-light my-padding">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand" href="#"><img
+                        src="https://www.saylaniwelfare.com/static/media/logo_saylaniwelfare.22bf709605809177256c.png"
+                        alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link1" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link1" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link1" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link1" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-btn nav-link-btn1" href="#">DONATE NOW</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-btn nav-link-btn2" href="#">BE A SPONSER</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="my-padding pt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 d-flex flex-column justify-content-center hero-left-box">
+                    <div class="heading-hero">
+                        Welcome to the <span class="green">Saylani</span> Welfare
+                        <br>
+                        Non Governmental Organization in Pakistan
+                    </div>
+                    <div class="slogan-hero">
+                        The largest NGO offering free <span class="running-text"></span>
+                    </div>
+                    <div class="paragraph-hero">
+                        Saylani Welfare is on the ground and already working with local communities to assess how best
+                        to support underprivileged families in more than 63 areas of day to day lives.
+                    </div>
+                    <div class="explore-btn">
+                        <button>Explore More <ion-icon name="arrow-forward-outline"
+                                class="arrow-icon"></ion-icon></button>
+                    </div>
+                </div>
+                <div class="col-6 hero-right-box">
+                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646926708/website-images/static/38.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-padding">
+        <div class="container-fluid section-container" id="section-two-desktop">
+            <div class="flex-container">
+
+                <!-- Dropdown -->
+                <div class="donate-input">
+                    <span class="second-input-left-general">General</span>
+                    <input type="number" placeholder="0" class="input-number" />
+                    <span class="second-input-right-rs">Rs.</span>
+                </div>
+
+                <!-- Buttons -->
+                <button class="action-button">
+                    Blood Bank / Thalassemia Treatment
+                </button>
+                <button class="action-button">
+                    Family Kifalat
+                </button>
+                <button class="action-button">
+                    Medical
+                </button>
+                <button class="action-button">
+                    Food
+                </button>
+                <!-- Quick Donate Button -->
+                <button class="quick-donate-button">
+                    Quick Donate
+                </button>
+            </div>
+        </div>
+
+        <div class="container-fluid section-container" id="section-two-mobile">
+            <div class="flex-container">
+
+                <!-- Dropdown -->
+                <div class="section-two-input-box">
+                    <div class="donate-input">
+                        <span class="second-input-left-general">General</span>
+                        <input type="number" placeholder="0" class="input-number" style="width: 100%;" />
+                        <span class="second-input-right-rs">Rs.</span>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="section-two-action-buttons">
+                    <button class="action-button">
+                        Blood Bank / Thalassemia Treatment
+                    </button>
+                    <button class="action-button">
+                        Family Kifalat
+                    </button>
+                    <button class="action-button">
+                        Medical
+                    </button>
+                    <button class="action-button">
+                        Food
+                    </button>
+                </div>
+
+
+                <div class="section-two-donate-button">
+                    <button class="quick-donate-button-mobile">
+                        Quick Donate
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="my-padding mt-4">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1727188228/website-images/dynamic/641ae885-e8cf-4d7b-b19e-6041ace8d890.jpg"
+                        alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1727273177/website-images/dynamic/010d7328-dd17-4a67-8831-56a64c83be8b.jpg"
+                        alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1721909453/website-images/dynamic/692fbdfa-20b6-4f0b-9c59-778cca7ba0b5.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="my-padding mt-5">
+        <h1 class="what-we-doing-heading">What We Are Doing</h1>
+        <div class="container-fluid p-0 mt-5">
+            <div class="wwe-card-box">
+                <div class="wwe-card">
+                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927889/website-images/static/44.png"
+                        alt="">
+                    <p>Welfare</p>
+                </div>
+                <div class="wwe-card">
+                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927857/website-images/static/41.png"
+                        alt="">
+                    <p>Medical</p>
+                </div>
+                <div class="wwe-card">
+                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927849/website-images/static/39.png"
+                        alt="">
+                    <p>Online Sadqah</p>
+                </div>
+                <div class="wwe-card">
+                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927853/website-images/static/40.png"
+                        alt="">
+                    <p>Clean Water</p>
+                </div>
+                <div class="wwe-card">
+                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927923/website-images/static/48.png"
+                        alt="">
+                    <p>Education</p>
+                </div>
+                <div class="wwe-card">
+                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927876/website-images/static/43.png"
+                        alt="">
+                    <p>Food</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-padding mt-5 mb-5">
+        <div class="container-fluid p-0">
+            <div class="row fifth-section-boxes">
+                <div class="col-12 col-md-6 col-lg-4 mt-3">
+                    <div class="fifth-section-box-main">
+                        <div class="fifth-section-box-img">
+                            <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1676274365/website-images/dynamic/b0abff1d-a3f9-49a7-9d58-273bbc735561.jpg"
+                                alt="">
+                        </div>
+                        <div class="fifth-section-box-content">
+                            <div class="top-text">Daily Food</div>
+                            <div class="bottom-button"><button>Donate</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mt-3">
+                    <div class="fifth-section-box-main">
+                        <div class="fifth-section-box-img">
+                            <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1720264120/website-images/dynamic/c029347b-b528-4c27-8a1b-39366f5349d7.jpg"
+                                alt="">
+                        </div>
+                        <div class="fifth-section-box-content">
+                            <div class="top-text">Sponsor Vocational Students</div>
+                            <div class="bottom-button"><button>Donate</button></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mt-3">
+                    <div class="fifth-section-box-main">
+                        <div class="fifth-section-box-img">
+                            <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1654923364/website-images/dynamic/c6fdf6af-51d5-4388-97ef-6cf10eb73aca.jpg"
+                                alt="">
+                        </div>
+                        <div class="fifth-section-box-content">
+                            <div class="top-text">Sponsor IT Students</div>
+                            <div class="bottom-button"><button>Donate</button></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-padding mt-5 mb-5">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="sixth-section-img">
+                        <img src="https://i.tribune.com.pk/media/images/2178912-image-1584559620/2178912-image-1584559620.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 sixth-section-right-box mt-5 mt-lg-0">
+                    <div class="sixth-section-right">
+                        <h1 class="text-center text-lg-start">Other Projects</h1>
+                        <div class="sixth-section-cards">
+
+                            <div class="sixth-section-card">
+                                <div class="left-icon">
+                                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927917/website-images/static/47.png"
+                                        alt="">
+                                </div>
+                                <div class="right-content">
+                                    <h1>Hepatitis</h1>
+                                    <p>Saylani Welfare has also set up a clinic for the best treatment of hepatitis
+                                        patients where hepatitis patients are being treated</p>
+                                </div>
+                            </div>
+
+                            <div class="sixth-section-card">
+                                <div class="left-icon">
+                                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927914/website-images/static/46.png"
+                                        alt="">
+                                </div>
+                                <div class="right-content">
+                                    <h1>Housing Society</h1>
+                                    <p>Saylani Welfare is also providing its own home facility for the homeless people.
+                                        So far, thousands of houses and flats have been constructed and given in easy
+                                        installments</p>
+                                </div>
+                            </div>
+
+                            <div class="sixth-section-card">
+                                <div class="left-icon">
+                                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927868/website-images/static/42.png"
+                                        alt="">
+                                </div>
+                                <div class="right-content">
+                                    <h1>IT Literacy</h1>
+                                    <p>We are committed to developing more than 1 million software developers, which
+                                        will add about 100 billion annually to Pakistan's economy and help ease the debt
+                                        burden on Pakistan</p>
+                                </div>
+                            </div>
+
+                            <div class="sixth-section-card">
+                                <div class="left-icon">
+                                    <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927896/website-images/static/45.png"
+                                        alt="">
+                                </div>
+                                <div class="right-content">
+                                    <h1>Tharparkar</h1>
+                                    <p>In Tharparkar, Saylani has set up several schools and ro plants, dug wells and
+                                        brought the children there to Karachi and taught them modern technology</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-padding mt-5 mb-5">
+        <div class="seven-section-main-box">
+            <div class="row wave-cards">
+                <div class="col-12 col-md-6 col-lg-3 wave-card mt-5">
+                    <div class="wave-card-icon">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646928748/website-images/static/50.png"
+                            alt="">
+                    </div>
+                    <div class="wave-card-text">
+                        <h1>300000</h1>
+                        <p>Food</p>
+                        <p>(Daily)</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 wave-card mt-5">
+                    <div class="wave-card-icon">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646928746/website-images/static/49.png"
+                            alt="">
+                    </div>
+                    <div class="wave-card-text">
+                        <h1>20000</h1>
+                        <p>Family Adoption</p>
+                        <p>(Monthly)</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 wave-card mt-5">
+                    <div class="wave-card-icon">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646928752/website-images/static/51.png"
+                            alt="">
+                    </div>
+                    <div class="wave-card-text">
+                        <h1>25000</h1>
+                        <p>Education</p>
+                        <p>(Monthly)</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 wave-card mt-5">
+                    <div class="wave-card-icon">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646928755/website-images/static/52.png"
+                            alt="">
+                    </div>
+                    <div class="wave-card-text">
+                        <h1>125000</h1>
+                        <p>Medical</p>
+                        <p>(Monthly)</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="assets/js/script.js"></script>
