@@ -60,3 +60,32 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
   
+
+  $(document).ready(function() {
+    $(".dropbtn").click(function() {
+        $(".dropdown-content").slideToggle(300); // Toggle with animation
+    });
+
+    // Close the dropdown if clicked outside of it
+    $(document).click(function(event) {
+        if (!$(event.target).closest(".dropdown").length) {
+            $(".dropdown-content").slideUp(300); // Close with animation
+        }
+    });
+});
+
+
+var swiperSecond = new Swiper('.swiper-container-second', {
+    loop: true,
+    // autoplay: {
+    //     delay: 5000, // Different delay for second slider
+    // },
+    pagination: {
+        el: '.swiper-container-second .swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-container-second .swiper-button-next-second',
+        prevEl: '.swiper-container-second .swiper-button-prev-second',
+    },
+});
