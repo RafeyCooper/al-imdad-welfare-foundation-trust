@@ -36,7 +36,6 @@
 .custom-nav-bg {
     background-color: white;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
-    padding: 10px 0px;
     position: -webkit-sticky;
     position: sticky;
     top: -1px;
@@ -1157,6 +1156,20 @@ footer::before {
     }
 }
 
+@media only screen and (max-width: 991px){
+    .nav-link1{
+        margin-top: 10px;
+    }
+    .nav-item{
+        height: 100%;
+    }
+    .navbar-nav{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        gap: 30px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .my-padding {
         max-width: 640px;
@@ -1221,6 +1234,7 @@ footer::before {
         padding: 100px 20px;
         padding-top: 50px;
     }
+
 }
 
 @media only screen and (max-width: 540px) {
