@@ -230,7 +230,7 @@
 .action-button:hover{
     background-color: var(--dark-color);
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 
 .quick-donate-button {
@@ -246,7 +246,7 @@
 }
 
 .quick-donate-button:hover{
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 
 .donate-input {
@@ -321,7 +321,11 @@
     font-weight: 400;
     border: none;
     padding: 1rem 2rem;
-    transition: background-color 1.2s ease-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.quick-donate-button-mobile:hover{
+    transform: scale(1.04);
 }
 
 .section-two-input-box {
