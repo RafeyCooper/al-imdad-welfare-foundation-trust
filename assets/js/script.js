@@ -89,3 +89,44 @@ var swiperSecond = new Swiper('.swiper-container-second', {
         prevEl: '.swiper-container-second .swiper-button-prev-second',
     },
 });
+
+$(document).ready(function() {
+    $('#pc-service').click(function() {
+        $('.nav-dropdown-menu').stop(true, true).slideToggle(200);
+        $(this).toggleClass('open');
+    });
+
+    // Optional: Close the dropdown when clicking outside of the dropdown
+    // $(document).click(function(event) {
+    //     if (!$(event.target).closest('.nav-dropdown').length) {
+    //         $('.nav-dropdown-menu').stop(true, true).slideUp(200);
+    //         $('.nav-dropdown').removeClass('open');
+    //     }
+    // });
+});
+
+// $(document).ready(function() {
+//     $('.nav-drop-heading').click(function() {
+//         $(this).next('.nav-drop-content').slideToggle(300); // Show or hide content
+//     });
+// });
+
+
+$(document).ready(function() {
+    // When "Services" is clicked, show the modal
+    $('#mobile-service').click(function() {
+        $('#myModal').fadeIn(); // Show the modal
+    });
+
+    // When the close button is clicked, hide the modal
+    $('.modal .close').click(function() {
+        $('#myModal').fadeOut(); // Hide the modal
+    });
+
+    // When anywhere outside the modal content is clicked, hide the modal
+    $(window).click(function(event) {
+        if ($(event.target).is('#myModal')) {
+            $('#myModal').fadeOut(); // Hide the modal
+        }
+    });
+});

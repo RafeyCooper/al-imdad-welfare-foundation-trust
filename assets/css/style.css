@@ -105,13 +105,183 @@
     transform: scale(1.1);
 }
 
-/* .nav-link-btn1 {
-     !important;
+#mobile-service{
+    display: none;
+}
+#pc-service{
+    display: block;
 }
 
-.nav-link-btn2 {
-    background-color: var(--dark-color) !important;
-} */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown::before {
+    content: '';
+    position: absolute;
+    top: 46px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--light-color) transparent;
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+}
+
+.nav-dropdown.open::before {
+    transform: translateX(-50%); /* Rotate arrow when dropdown is open */
+    opacity: 1;
+}
+
+.nav-dropdown-menu {
+    max-height: calc(100vh - 163px);
+    display: none;
+    position: absolute;
+    top: 107px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: hsla(94, 100%, 90%, 0.349);
+    backdrop-filter: blur(50px);
+    z-index: 1000;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--dark-color);
+    overflow-y: auto;
+}
+
+.nav-dropdown-menu-mobile {
+    height: 100%;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: hsla(94, 100%, 90%, 0.349);
+    backdrop-filter: blur(50px);
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--dark-color);
+    overflow-y: auto;
+}
+
+.nav-drop-heading {
+    font-size: 24px;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    border-bottom: 3px solid black;
+}
+
+.nav-drop-content {
+    margin-top: 15px;
+}
+
+.nav-drop-content ul {
+    counter-reset: serial-number;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.nav-drop-content ul li {
+    list-style-type: none;
+    padding: 5px 10px;
+    /* margin: 5px 0px; */
+    transition: all ease-in-out 0.3s;
+    border-radius: 5px;
+    counter-increment: serial-number;
+    cursor: pointer;
+}
+
+.nav-drop-content ul li span {
+    font-family: "Poppins", serif;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0;
+    /* border: 1px solid black; */
+    margin-left: -10px;
+    transition: margin-left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    display: inline-block;
+    width: 20px; /* Set a fixed width for numbers */
+    text-align: right; /* Align the numbers to the right */
+}
+
+.nav-drop-content ul li:hover{
+    background-color: var(--primary-color);
+}
+
+.nav-drop-content ul li:hover span {
+    opacity: 1;
+    margin-left: 0px;
+    color: white;
+}
+
+
+.nav-drop-content ul li:hover a{
+    color: white;
+    margin-left: 5px;
+}
+
+.nav-drop-content ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: "Poppins", serif;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all ease-in-out 0.3s;
+    margin-left: -10px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 3% auto; /* 15% from the top and centered */
+    padding: 20px;
+    padding-top: 0px !important;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 95%;
+}
+
+.close-modal {
+    padding: 10px 0px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-heading {
+    margin: 0px;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+}
 
 .my-padding {
     margin-left: auto;
@@ -1162,7 +1332,7 @@ footer::before {
     font-size: 24px;
 }
 
-.lists{
+.lists {
     padding: 10px 10px;
     padding-bottom: 20px;
 }
@@ -1171,6 +1341,7 @@ footer::before {
     display: flex;
     padding: 5px 0px;
 }
+
 .list .star {
     width: 35px;
     height: 35px;
@@ -1299,6 +1470,12 @@ footer::before {
         margin-bottom: 20px;
         gap: 30px;
     }
+    #mobile-service{
+        display: block;
+    }
+    #pc-service{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1400,5 +1577,17 @@ footer::before {
 
     .wwe-card-box {
         justify-content: center;
+    }
+    .modal-content{
+        width: 95%;
+    }
+    .modal-content{
+        padding: 10px;
+    }
+    .nav-drop-content ul li a {
+        font-size: 14px;
+    }
+    .nav-drop-heading {
+        font-size: 20px;
     }
 }
