@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Lexend+Mega:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #048f40;
+    --dark-color: #0e6a47;
+    --light-color: #83b757;
+}
+
+.service-bg-container {
+    position: relative;
+    padding: 50px 0px;
+}
+
+.service-bg-container::before {
+    background-image: url(https://www.saylaniwelfare.com/static/media/page_header.ee6c9895d66d7d7cce3a.png);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 100%;
+    opacity: .1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.service-right-image {
+    width: 100%;
+}
+
+.bread-crums {
+    font-family: "Poppins", serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.service-left-content-box {
+    padding: 0px 10px;
+}
+
+.service-heading {
+    font-family: "Poppins", serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+.service-content {
+    font-family: "Poppins", serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}

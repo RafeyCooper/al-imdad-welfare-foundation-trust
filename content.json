@@ -1,0 +1,46 @@
+{
+    "education": {
+        "non_profit_schooling_system": {
+            "heading": "Education",
+            "subheading": "Non-Profit Schooling System",
+            "content": "Donate for healthcare with Saylani Welfare and support healthcare NGOs in Pakistan. Your contributions help improve health services and provide vital care to those in need.",
+            "image": "https://res.cloudinary.com/saylani-welfare/image/upload/v1646140592/website-images/static/1.jpg"
+        },
+        "adult_education": {
+            "heading": "Education",
+            "subheading": "Adult Education",
+            "content": "Donate for healthcare with Saylani Welfare and support healthcare NGOs in Pakistan. Your contributions help improve health services and provide vital care to those in need.",
+            "image": "https://res.cloudinary.com/saylani-welfare/image/upload/v1646140592/website-images/static/1.jpg"
+        },
+        "providing_course": {
+            "heading": "Education",
+            "subheading": "Providing Course",
+            "content": "Donate for healthcare with Saylani Welfare and support healthcare NGOs in Pakistan. Your contributions help improve health services and provide vital care to those in need.",
+            "image": "https://res.cloudinary.com/saylani-welfare/image/upload/v1646140592/website-images/static/1.jpg"
+        },
+        "beg_less_school": {
+            "heading": "Education",
+            "subheading": "Beg Less School",
+            "content": "Donate for healthcare with Saylani Welfare and support healthcare NGOs in Pakistan. Your contributions help improve health services and provide vital care to those in need.",
+            "image": "https://res.cloudinary.com/saylani-welfare/image/upload/v1646140592/website-images/static/1.jpg"
+        },
+        "female_education": {
+            "heading": "Education",
+            "subheading": "Female Education",
+            "content": "Donate for healthcare with Saylani Welfare and support healthcare NGOs in Pakistan. Your contributions help improve health services and provide vital care to those in need.",
+            "image": "https://res.cloudinary.com/saylani-welfare/image/upload/v1646140592/website-images/static/1.jpg"
+        },
+        "makatib": {
+            "heading": "Education",
+            "subheading": "Makatib",
+            "content": "Donate for healthcare with Saylani Welfare and support healthcare NGOs in Pakistan. Your contributions help improve health services and provide vital care to those in need.",
+            "image": "https://res.cloudinary.com/saylani-welfare/image/upload/v1646140592/website-images/static/1.jpg"
+        },
+        "short_courses_computer_language": {
+            "heading": "Education",
+            "subheading": "Short Courses Computer/Language",
+            "content": "Donate for healthcare with Saylani Welfare and support healthcare NGOs in Pakistan. Your contributions help improve health services and provide vital care to those in need.",
+            "image": "https://res.cloudinary.com/saylani-welfare/image/upload/v1646140592/website-images/static/1.jpg"
+        }
+    }
+}
