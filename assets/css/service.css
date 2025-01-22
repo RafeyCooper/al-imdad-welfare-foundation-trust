@@ -28,6 +28,7 @@
 
 .service-right-image {
     width: 100%;
+    filter: blur(7px);
 }
 
 .bread-crums {

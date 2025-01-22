@@ -4,7 +4,9 @@
     --primary-color: #048f40;
     --dark-color: #0e6a47;
     --light-color: #83b757;
+    --test-blur: 7px;
 }
+
 
 .top-info-bar {
     padding: 10px 0px;
@@ -355,6 +357,7 @@
 .hero-right-box img {
     width: 80%;
     object-fit: contain;
+    filter: blur(var(--test-blur));
 }
 
 .slogan-hero .running-text {
@@ -534,6 +537,7 @@
     display: block;
     width: 100%;
     height: 560px !important;
+    filter: blur(var(--test-blur));
 }
 
 .what-we-doing-heading {
@@ -624,6 +628,7 @@
     /* width: 100%; */
     z-index: -1;
     filter: brightness(50%);
+    filter: blur(var(--test-blur));
 }
 
 .bottom-button {
@@ -662,6 +667,7 @@
     width: 100%;
     border-radius: 10px;
     border: 2px solid var(--dark-color);
+    filter: blur(var(--test-blur));
 }
 
 .sixth-section-right h1 {
@@ -1049,6 +1055,7 @@
     height: 200px;
     object-fit: cover;
     border-radius: 8px 8px 0px 0px;
+    filter: blur(var(--test-blur));
 }
 
 .news-content {
@@ -1163,9 +1170,6 @@ footer::before {
 }
 
 .tweeter-icon img {
-    width: 24px !important;
-    height: 24px !important;
-    filter: invert(100%);
     object-fit: cover;
 }
 
@@ -1262,6 +1266,7 @@ footer::before {
 
 .introduction-img-first {
     width: 100%;
+    filter: blur(var(--test-blur));
 }
 
 .introduction-top-box .breadcrum {
