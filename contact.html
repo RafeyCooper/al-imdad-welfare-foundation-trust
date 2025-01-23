@@ -844,7 +844,8 @@
                     if (response.status === 'success') {
                         $("#subscribe_email").val('');
                         $(".alert_message_text").html('')
-                        $(".alert_message_text_success").html('Thank you for subscribing')
+                        $(".alert_message_text_success").html('Thank you for subscribing');
+                        checkForInput();
                     }
                     else if (response.status === 'invalidemail') {
                         $(".alert_message_text_success").html('')
