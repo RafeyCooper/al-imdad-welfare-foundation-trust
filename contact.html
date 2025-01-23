@@ -829,7 +829,7 @@
                 $(".alert_message_text").html('Please fill the field')
                 return
             }
-        
+
             $('.subscribe_button').css('display', 'none');
             $('.loader_button_subscribe').css('display', 'flex');
 
@@ -920,14 +920,14 @@
                         $("#subject").val('');
                         $("#message").val('');
                         checkForInput();
-                        $(".loader_button").css('display', 'none');
-                        $('.contact-submit-btn').css('display', 'block');
+
                     } else {
                         $(".form_alert_message_text_success").html('');
                         $(".form_alert_message_text_error").html(response.message)
-                        $$(".loader_button").css('display', 'none');
-                        $('.contact-submit-btn').css('display', 'block');
                     }
+                    
+                    $(".loader_button").css('display', 'none');
+                    $('.contact-submit-btn').css('display', 'block');
                 },
                 error: function (xhr, status, error) {
                     console.error("AJAX Error:", status, error);
