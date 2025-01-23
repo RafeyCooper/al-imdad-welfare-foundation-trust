@@ -627,7 +627,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 p-0">
-                    <form class="contact-form">
+                    <div id="contactForm">
                         <div class="form-row">
                             <div class="form-group">
                                 <div class="input-container">
@@ -637,6 +637,10 @@
                                 <div class="input-container">
                                     <input type="email" id="email" name="email" required>
                                     <label for="email">Email</label>
+                                </div>
+                                <div class="input-container">
+                                    <input type="number" id="number" name="number" required>
+                                    <label for="email">Phone</label>
                                 </div>
                             </div>
                         </div>
@@ -656,8 +660,17 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="text-start form_alert_message_success">
+                            <p class="form_alert_message_text_success"></p>
+                        </div>
+                        <div class="text-start form_alert_message_error">
+                            <p class="form_alert_message_text_error"></p>
+                        </div>
                         <button type="submit" class="contact-submit-btn">Submit</button>
-                    </form>
+                        <div class="loader_button">
+                            <span class="loader"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6 p-0">
                     <div class="map-box">
@@ -676,11 +689,23 @@
             <div class="guide_heading">Al-Imdad Guide</div>
             <div class="guide_email_input mt-4">
                 <div class="guide_input_container">
-                    <input type="text" id="subscribe_email" name="subscribe_email" required>
+                    <input type="email" id="subscribe_email" name="subscribe_email" required>
                     <label for="subscribe_message">Email</label>
+                    <div class="text-start mt-2 alert_message">
+                        <p class="alert_message_text"></p>
+                    </div>
+                    <div class="text-start mt-2 alert_message_success">
+                        <p class="alert_message_text_success"></p>
+                    </div>
                 </div>
             </div>
+
             <div class="subscribe_button"><button>SUBSCRIBE</button></div>
+            <div class="d-flex justify-content-center">
+                <div class="loader_button_subscribe">
+                    <span class="loader"></span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -692,14 +717,13 @@
                     <div class="footer-icons">
                         <div class="footer-icon facebook-icon">
                             <a href="https://www.facebook.com/AL.ImdadWelfareFoundation">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAYAAADhu0ooAAAABHNCSVQICAgIfAhkiAAAAktJREFUaEPtmL9PU1EUx7+tDwjUVgoFK6aL3RxhMtGNEP8AC0M3BkPSSOKg0bAATVwloAykmwhhYMZoQkIpJgYwDo6EpQ2FVrHWUqKvVW9d+5p3H7n3/fLcsfnmvfv5fu+557x6Yg+zf/AfLA+BuixlStRlgYISpUQd6gAdXYcG13LblKjMRG9E2nB70IdIWMHVXgWhoALlElCrA8dfaihX6nj/6RxvdyrCtmFqou1tHkyMBRlkly7A1m4VL1dPdXW8AtNAG4klJ/sRjbRz7c2xoPdjQQzf8nFBNkTpvSperDgs0XBIwdzTMLwebk6k9xnoa4eBjt4N4N5IgJ+ykagTQacTfbgZ7WgJuvnhDG8yFRwVavilyvkfwJTLaGHqGmsj7DbSWJmPVcwvizuirdw0BXRpZgDdfq/mHmYXi/h88NPQsb6I2BTQ1OwAApe1QSefHf8bEmQvc0CTDNSnDZpI5lH8xkYiyYtARRqcclui1/sVXPE3366PxkPwdWpPC3OvvqJU/t3ka+5EZcN98+8XDUDo0X0Q78GdIf2BnWezom9j24JOzORx+l3cJWVLUJV1m/jjHE/w3Bpbgh5mVTx5fsINwSO0Jeg2G+gXBH65NIywJejaRhnr78o8QXFrhIKKai9HBRWlH+Jai/BEW9nruoGBQN02AlKilChA36PcHZJPKLSPUo1SjVKN8hWeARXVqAGzdKU06zKLqI/qnhNjAlNq1NiW5KgJVI6v1j2VErXOezlvpkTl+GrdUylR67yX82ZKVI6v1j31L/Sti1p5bJxrAAAAAElFTkSuQmCC"
-                                alt="">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAYAAADhu0ooAAAABHNCSVQICAgIfAhkiAAAAktJREFUaEPtmL9PU1EUx7+tDwjUVgoFK6aL3RxhMtGNEP8AC0M3BkPSSOKg0bAATVwloAykmwhhYMZoQkIpJgYwDo6EpQ2FVrHWUqKvVW9d+5p3H7n3/fLcsfnmvfv5fu+557x6Yg+zf/AfLA+BuixlStRlgYISpUQd6gAdXYcG13LblKjMRG9E2nB70IdIWMHVXgWhoALlElCrA8dfaihX6nj/6RxvdyrCtmFqou1tHkyMBRlkly7A1m4VL1dPdXW8AtNAG4klJ/sRjbRz7c2xoPdjQQzf8nFBNkTpvSperDgs0XBIwdzTMLwebk6k9xnoa4eBjt4N4N5IgJ+ykagTQacTfbgZ7WgJuvnhDG8yFRwVavilyvkfwJTLaGHqGmsj7DbSWJmPVcwvizuirdw0BXRpZgDdfq/mHmYXi/h88NPQsb6I2BTQ1OwAApe1QSefHf8bEmQvc0CTDNSnDZpI5lH8xkYiyYtARRqcclui1/sVXPE3366PxkPwdWpPC3OvvqJU/t3ka+5EZcN98+8XDUDo0X0Q78GdIf2BnWezom9j24JOzORx+l3cJWVLUJV1m/jjHE/w3Bpbgh5mVTx5fsINwSO0Jeg2G+gXBH65NIywJejaRhnr78o8QXFrhIKKai9HBRWlH+Jai/BEW9nruoGBQN02AlKilChA36PcHZJPKLSPUo1SjVKN8hWeARXVqAGzdKU06zKLqI/qnhNjAlNq1NiW5KgJVI6v1j2VErXOezlvpkTl+GrdUylR67yX82ZKVI6v1j31L/Sti1p5bJxrAAAAAElFTkSuQmCC"
+                                    alt="">
                             </a>
                         </div>
                         <div class="footer-icon tweeter-icon">
                             <a href="https://www.instagram.com/al.imdadwelfarefoundationtrust">
-                            <img src="./assets/img/instagram.png"
-                                alt="">
+                                <img src="./assets/img/instagram.png" alt="">
                             </a>
                         </div>
                         <div class="footer-icon youtube-icon">
@@ -765,13 +789,10 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 <script src="assets/js/script.js"></script>
-<script>
-    // Select all input and textarea fields
-    const inputs = document.querySelectorAll('input, textarea');
 
-    // Loop through the inputs and add event listeners
+<script>
+    const inputs = document.querySelectorAll('input, textarea');
     inputs.forEach(input => {
-        // Add or remove the 'has-value' class based on input value
         input.addEventListener('input', () => {
             if (input.value) {
                 input.classList.add('has-value');
@@ -780,4 +801,142 @@
             }
         });
     });
+
+    function checkForInput() {
+        const inputs = document.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('input', () => {
+                if (input.value) {
+                    input.classList.add('has-value');
+                } else {
+                    input.classList.remove('has-value');
+                }
+            });
+
+            if (!input.value) {
+                input.classList.remove('has-value');
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        $(".subscribe_button").on('click', function () {
+
+            const email = $("#subscribe_email").val();
+
+            if (!email) {
+                $(".alert_message_text_success").html('')
+                $(".alert_message_text").html('Please fill the field')
+                return
+            }
+        
+            $('.subscribe_button').css('display', 'none');
+            $('.loader_button_subscribe').css('display', 'flex');
+
+            $.ajax({
+                url: './php/news_letter_email_submission.php',
+                method: 'POST',
+                data: { email: email },
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+
+                    if (response.status === 'success') {
+                        $("#subscribe_email").val('');
+                        $(".alert_message_text").html('')
+                        $(".alert_message_text_success").html('Thank you for subscribing')
+                    }
+                    else if (response.status === 'invalidemail') {
+                        $(".alert_message_text_success").html('')
+                        $(".alert_message_text").html('Please enter a valid email address')
+                    }
+                    else if (response.status === 'exists') {
+                        $(".alert_message_text_success").html('')
+                        $(".alert_message_text").html('Email already exist')
+                    }
+                    else {
+                        $(".alert_message_text_success").html('')
+                        $(".alert_message_text").html('An error occurred. Please try again.')
+                    }
+
+                    $('.subscribe_button').css('display', 'block');
+                    $('.loader_button_subscribe').css('display', 'none');
+
+                },
+                error: function (xhr, status, error) {
+                    console.error("AJAX Error:", status, error);
+                    $(".alert_message_text_success").html('')
+                    $(".alert_message_text").html('An error occurred. Please try again.')
+                    $('.subscribe_button').css('display', 'block');
+                    $('.loader_button_subscribe').css('display', 'none');
+                }
+            });
+        });
+    });
+
+    $(document).ready(function () {
+        $(".contact-submit-btn").on('click', function (e) {
+
+            const name = $("#name").val();
+            const email = $("#email").val();
+            const number = $("#number").val();
+            const subject = $("#subject").val();
+            const message = $("#message").val();
+
+            if (!name || !email || !subject || !message) {
+                $(".form_alert_message_text_error").html('All fields are required')
+                $(".form_alert_message_text_success").html('');
+                return;
+            }
+
+            // console.log("Name:", name);
+            // console.log("Email:", email);
+            // console.log("Subject:", subject);
+            // console.log("Message:", message);
+
+            $(".loader_button").css('display', 'flex');
+            $('.contact-submit-btn').css('display', 'none');
+
+            $.ajax({
+                url: './php/submit_contact_form.php',
+                method: 'POST',
+                data: {
+                    name: $("#name").val(),
+                    email: $("#email").val(),
+                    number: $("#number").val(),
+                    subject: $("#subject").val(),
+                    message: $("#message").val()
+                },
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                    if (response.status === 'success') {
+                        $('.form_alert_message_text_success').html('Thank you for contacting us!');
+                        $(".form_alert_message_text_error").html('');
+                        $("#name").val('');
+                        $("#email").val('');
+                        $("#number").val('');
+                        $("#subject").val('');
+                        $("#message").val('');
+                        checkForInput();
+                        $(".loader_button").css('display', 'none');
+                        $('.contact-submit-btn').css('display', 'block');
+                    } else {
+                        $(".form_alert_message_text_success").html('');
+                        $(".form_alert_message_text_error").html(response.message)
+                        $$(".loader_button").css('display', 'none');
+                        $('.contact-submit-btn').css('display', 'block');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error("AJAX Error:", status, error);
+                    $(".form_alert_message_text_success").html('');
+                    $(".form_alert_message_text_error").html('An error occurred. Please try again.')
+                    $(".loader_button").css('display', 'none');
+                    $('.contact-submit-btn').css('display', 'block');
+                }
+            });
+        });
+    });
+
 </script>

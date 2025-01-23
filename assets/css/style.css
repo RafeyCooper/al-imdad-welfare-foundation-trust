@@ -1374,6 +1374,7 @@ footer::before {
     margin-left: 10px;
 }
 
+
 @media only screen and (max-width: 1536px) {
     .my-padding {
         max-width: 1280px;

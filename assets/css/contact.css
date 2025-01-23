@@ -48,6 +48,7 @@
 
 input[type="text"],
 input[type="email"],
+input[type="number"],
 textarea {
     width: 100%;
     padding: 10px;
@@ -111,7 +112,7 @@ textarea:focus {
     transition: all ease-in-out 0.3s;
 }
 
-.contact-submit-btn:hover{
+.contact-submit-btn:hover {
     background-color: #0a4931;
 }
 
@@ -133,7 +134,7 @@ textarea:focus {
     border-radius: 5px;
 }
 
-.guide_heading{
+.guide_heading {
     font-family: "Poppins", serif;
     font-size: 32px;
     font-weight: 700;
@@ -150,25 +151,106 @@ textarea:focus {
     background-color: var(--dark-color);
     color: white;
     transition: all ease-in-out 0.3s;
+    width: 230px;
 }
 
 .subscribe_button button:hover {
     background-color: #0a4931;
 }
 
-@media only screen and (max-width: 991px){
-    .map-box{
+.alert_message p {
+    color: red;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.alert_message_success p {
+    color: green;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+
+.form_alert_message_success {
+    margin-top: -10px;
+    margin-bottom: 22px;
+}
+
+.form_alert_message_success p {
+    color: green;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.form_alert_message_error {
+    margin-top: -10px;
+}
+
+.form_alert_message_error p {
+    color: red;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.loader_button {
+    display: none;
+    width: 100%;
+    background-color: var(--dark-color);
+    padding: 13px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader_button_subscribe {
+    display: none;
+    width: 230px;
+    background-color: var(--dark-color);
+    padding: 17px 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .map-box {
         height: 500px;
         padding-left: 0px;
     }
-    
-    .contact-form{
+
+    .contact-form {
         padding-right: 0px;
     }
 }
 
-@media only screen and (max-width: 768px){
-    .guide_input_container{
+@media only screen and (max-width: 768px) {
+    .guide_input_container {
         width: 80%;
     }
 }
