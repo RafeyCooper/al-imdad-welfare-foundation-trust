@@ -13,9 +13,144 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/service.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
 </head>
 
 <body>
+
+    <div class="modal fade" id="donationModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-labelledby="donationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 12px;">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Make a Donation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="div-4">
+                        <div class="div-5">
+                            <div class="div-6">
+                                <span class="bank-transfer-details">Bank Transfer Details</span>
+                                <div class="frame-7">
+                                    <div class="frame-8"></div>
+                                </div>
+                            </div>
+                            <div class="div-9">
+                                <span class="abc-islamic-bank">Bank: ABC Islamic Bank</span><span
+                                    class="organization-name">Account
+                                    Title: Organization Name</span><span class="account-number">Account Number:
+                                    1234-5678-9012-3456</span><span class="iban">IBAN: PK36 ABCD 1234 5678 9012
+                                    3456</span>
+                            </div>
+                        </div>
+                        <div class="div-a">
+                            <div class="h-b">
+                                <span class="jazz-cash">JazzCash</span>
+                                <div class="frame-c">
+                                    <div class="frame-d"></div>
+                                </div>
+                            </div>
+                            <div class="div-e">
+                                <div class="div-f">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="div-10">
+                                    <span class="account-number-11">Account Number: 0300-1234567</span><span
+                                        class="account-title">Account Title: Organization Name</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-12">
+                            <div class="h-13">
+                                <span class="easypaisa">Easypaisa</span>
+                                <div class="frame-14">
+                                    <div class="frame-15"></div>
+                                </div>
+                            </div>
+                            <div class="div-16">
+                                <div class="div-17">
+                                    <div class="img-18"></div>
+                                </div>
+                                <div class="main-div">
+                                    <span class="account-number-span">Account Number: 0300-7654321</span><span
+                                        class="account-title-span">Account Title: Organization Name</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0 px-0">
+                    <button class="button-19" data-bs-toggle="modal" data-bs-target="#donationFormModal">
+                        <span class="fill-form-span">Fill Donation Form</span>
+                        <div class="i-div">
+                            <div class="svg-div">
+                                <div class="frame-div"></div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="donationFormModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-labelledby="donationFormModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 12px;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Donation Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid p-0" style="padding-top: 9px !important;">
+                        <div id="donationForm">
+                            <div class="form-row">
+                                <div class="form-group m-0">
+                                    <div class="input-container">
+                                        <input type="text" id="donation_form_full_name" required>
+                                        <label>Full Name</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="email" id="donation_form_email_address" required>
+                                        <label>Email Address</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" id="donation_amount" required>
+                                        <label>Donation Amount</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="text" id="donation_form_purpose_of_donation" required>
+                                        <label>Purpose of Donation</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <label class="recipt_label">Upload Payment Recipt here</label>
+                                        <input type="file" id="donation_form_recipt" accept=".jpg,.jpeg,.png" required>
+                                    </div>
+                                    <div class="input-container m-0">
+                                        <textarea id="donation_form_comment" rows="3" required></textarea>
+                                        <label>Additional Comments (Optional)</label>
+                                    </div>
+                                    <div class="alert-donation-form-message-box">
+                                        <p class="alert-message-donation-form-text-success"></p>
+                                        <p class="alert-message-donation-form-text-danger"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0 px-0">
+                    <button class="button-19-new m-0" id="donationFormSubmitBtn">
+                        <span class="fill-form-span">Submit</span>
+                    </button>
+                    <button class="donationFormLoader">
+                        <span class="loader"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div style="background-color: #f8f9fa;">
         <div class="my-padding top-info-bar">
@@ -334,7 +469,8 @@
                             <a class="nav-link1" href="contact.html">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-btn nav-link-btn1" href="#">DONATE NOW</a>
+                            <a class="nav-link-btn nav-link-btn1" data-bs-toggle="modal" data-bs-target="#donationModal"
+                                href="#">DONATE NOW</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link-btn nav-link-btn2" href="#">BE A SPONSER</a>
@@ -345,7 +481,7 @@
         </nav>
 
         <div id="myModal" class="modal">
-            <div class="modal-content">
+            <div class="modal-content modal-service-content">
                 <div class="close-modal d-flex justify-content-between align-items-center">
                     <h2 class="modal-heading">Services</h2>
                     <span class="close">&times;</span>

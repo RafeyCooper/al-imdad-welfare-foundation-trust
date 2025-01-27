@@ -25,14 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host       = 'smtp.hostinger.com';
         $mail->SMTPAuth   = true; 
-        $mail->Username   = 'contact@imdadtrust.com';
-        $mail->Password   = 'pakistanIMDAD789+';
+        $mail->Username   = 'donation@imdadtrust.com';
+        $mail->Password   = 'pakistanIMDAD789@';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
         // Recipients
-        $mail->setFrom('contact@imdadtrust.com', 'Al-Imdad Foundation Trust');
-        $mail->addAddress('contact@imdadtrust.com', 'Al-Imdad Foundation Trust');
+        $mail->setFrom('donation@imdadtrust.com', 'Al-Imdad Foundation Trust');
+        $mail->addAddress('donation@imdadtrust.com', 'Al-Imdad Foundation Trust');
 
         // Handling file upload for the receipt
         if (isset($_FILES['receipt']) && $_FILES['receipt']['error'] == UPLOAD_ERR_OK) {

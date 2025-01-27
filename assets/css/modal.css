@@ -590,6 +590,10 @@ button {
   border-radius: 8px;
 }
 
+.button-19:hover{
+  background-color: var(--dark-color);
+}
+
 .button-19-new {
   position: relative;
   width: calc(100% - 30px);
@@ -605,6 +609,10 @@ button {
   border: none;
   z-index: 38;
   border-radius: 8px;
+}
+
+.button-19-new:hover{
+  background-color: var(--dark-color);
 }
 
 .fill-form-span {
@@ -720,6 +728,56 @@ textarea:focus {
   border-color: var(--primary-color);
 }
 
+.alert-message-donation-form-text-success {
+  margin: 0;
+  color: green;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.alert-message-donation-form-text-danger {
+  margin: 0;
+  color: red;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.donationFormLoader {
+  display: none;
+  background-color: var(--dark-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  position: relative;
+  width: calc(100% - 30px);
+  height: 48px;
+  cursor: pointer;
+  border: none;
+  z-index: 38;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .div-1 {
