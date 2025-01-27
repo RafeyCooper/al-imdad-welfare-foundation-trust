@@ -130,3 +130,9 @@ $(document).ready(function() {
         }
     });
 });
+
+
+$('#donationFormModal').on('show.bs.modal', function () {
+    // Close any currently open modals
+    $('.modal').not(this).modal('hide');
+});

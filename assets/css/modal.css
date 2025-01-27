@@ -3,6 +3,9 @@
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
+  --primary-color: #048f40;
+  --dark-color: #0e6a47;
+  --light-color: #83b757;
 }
 
 .main-container {
@@ -45,12 +48,38 @@ button {
   transition: opacity 0.3s ease;
 }
 
-.div-1.show{
+.donation-form-modal-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.div-1.show {
   opacity: 1;
   transform: scale(1);
 }
 
-.modal-box.show{
+.donation-form-div-1.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-box.show {
+  opacity: 1;
+}
+
+
+.donation-form-modal-box.show {
   opacity: 1;
 }
 
@@ -67,6 +96,21 @@ button {
   opacity: 0;
   transition: all ease 0.3s;
 }
+
+.donation-form-div-1 {
+  position: relative;
+  width: 600px;
+  /* height: 740px; */
+  padding-bottom: 17px;
+  background: #ffffff;
+  z-index: 2;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.25);
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+
 
 .button {
   position: relative;
@@ -146,8 +190,8 @@ button {
   background: rgba(0, 0, 0, 0);
   z-index: 5;
   width: 100%;
-  height: 570px;
-  padding: 0px 30px;
+  /* height: 570px; */
+  padding: 0px 16px;
   overflow: auto;
 }
 
@@ -157,6 +201,7 @@ button {
   padding: 20px 20px;
   z-index: 6;
   border-radius: 8px;
+  border: 1px solid var(--dark-color);
 }
 
 .div-6 {
@@ -285,6 +330,7 @@ button {
   padding: 10px 20px;
   ;
   margin-top: 20px;
+  border: 1px solid var(--dark-color);
 }
 
 .h-b {
@@ -409,6 +455,7 @@ button {
   border-radius: 8px;
   padding: 10px 20px;
   margin-top: 20px;
+  border: 1px solid var(--dark-color);
 }
 
 .h-13 {
@@ -528,16 +575,33 @@ button {
 
 .button-19 {
   position: relative;
-  width: calc(100% - 60px);
+  width: calc(100% - 32px);
   height: 48px;
-  margin: 24px 0 0 0;
+  /* margin: 24px 0 0 0; */
   cursor: pointer;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  background: #16a34a;
+  background: var(--primary-color);
+  border: none;
+  z-index: 38;
+  border-radius: 8px;
+}
+
+.button-19-new {
+  position: relative;
+  width: calc(100% - 30px);
+  height: 48px;
+  /* margin: 24px 0 0 0; */
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: var(--primary-color);
   border: none;
   z-index: 38;
   border-radius: 8px;
@@ -583,8 +647,86 @@ button {
   overflow: hidden;
 }
 
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input {
+  height: 60px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+label {
+  position: absolute;
+  left: 10px;
+  top: 17px;
+  background-color: white;
+  padding: 0 5px;
+  color: #999;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.recipt_label {
+  position: relative !important;
+  padding: 0 14px !important;
+  color: #ffffff !important;
+  transition: all 0.3s ease-in-out !important;
+  pointer-events: none !important;
+  top: 5px !important;
+  background-color: var(--primary-color) !important;
+  border-radius: 5px !important;
+  font-size: 14px !important;
+}
+
+input:focus+label,
+textarea:focus+label,
+input.has-value+label,
+textarea.has-value+label {
+  top: -8px;
+  left: 5px;
+  font-size: 12px;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 0px 10px;
+  background-color: var(--primary-color);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+}
+
+
 @media only screen and (max-width: 768px) {
   .div-1 {
+    width: 80%;
+  }
+
+  .donation-form-div-1 {
     width: 80%;
   }
 }
@@ -592,6 +734,10 @@ button {
 
 @media only screen and (max-width: 550px) {
   .div-1 {
+    width: 90%;
+  }
+
+  .donation-form-div-1 {
     width: 90%;
   }
 }
@@ -602,7 +748,7 @@ button {
     padding: 0px 10px;
   }
 
-  .button-19{
+  .button-19 {
     width: calc(100% - 20px);
   }
 

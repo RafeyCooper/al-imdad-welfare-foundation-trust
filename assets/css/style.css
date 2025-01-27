@@ -41,7 +41,7 @@
     position: -webkit-sticky;
     position: sticky;
     top: -1px;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .navbar-brand img {
@@ -242,8 +242,8 @@
     margin-left: -10px;
 }
 
-.modal {
-    display: none; /* Hidden by default */
+/* .modal {
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -251,11 +251,11 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
-}
+    background-color: rgba(0, 0, 0, 0.5);
+} */
 
 /* Modal Content */
-.modal-content {
+.modal-service-content {
     background-color: #fefefe;
     margin: 3% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -1590,10 +1590,10 @@ footer::before {
     .wwe-card-box {
         justify-content: center;
     }
-    .modal-content{
+    .modal-service-content{
         width: 95%;
     }
-    .modal-content{
+    .modal-service-content{
         padding: 10px;
     }
     .nav-drop-content ul li a {
