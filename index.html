@@ -42,7 +42,7 @@
 
 <body>
 
-    <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+    <div class="modal fade" id="donationModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="donationModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
             <div class="modal-content" style="border-radius: 12px;">
                 <div class="modal-header border-0">
@@ -117,7 +117,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="donationFormModal" tabindex="-1" aria-labelledby="donationFormModalLabel"
+    <div class="modal fade" id="donationFormModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="donationFormModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
             <div class="modal-content" style="border-radius: 12px;">
@@ -152,7 +152,7 @@
                                     </div>
                                     <div class="input-container m-0">
                                         <textarea id="donation_form_comment" rows="3" required></textarea>
-                                        <label>Additional Comments</label>
+                                        <label>Additional Comments (Optional)</label>
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +160,7 @@
                     </div>
                 </div>
                 <div class="modal-footer justify-content-center border-0 px-0">
-                    <button class="button-19-new m-0">
+                    <button class="button-19-new m-0" id="donationFormSubmitBtn">
                         <span class="fill-form-span">Submit</span>
                     </button>
                 </div>
