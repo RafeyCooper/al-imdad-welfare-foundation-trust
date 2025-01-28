@@ -71,18 +71,74 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         }
 
-        // Email subject & body
+        $mail->isHTML(true); // Set email format to HTML
+
         $mail->Subject = 'New Donation Received';
-        $body = "New donation received:\n\n";
-        $body .= "Full Name: $fullName\n";
-        $body .= "Email Address: $emailAddress\n";
-        $body .= "Donation Amount: $donationAmount\n";
-        $body .= "Purpose of Donation: $purposeOfDonation\n";
+        $body = '
+            <html>
+            <head>
+            <style>
+                body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+                padding: 20px;
+                }
+                .email-container {
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                border: 1px solid #e5e5e5;
+                }
+                .email-header {
+                background-color: #048f40;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                }
+                .email-body {
+                padding: 20px;
+                color: #333;
+                }
+                .email-footer {
+                background-color: #0e6a47;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+                font-size: 12px;
+                }
+                h3{
+                font-weight: bold;
+                }
+            </style>
+            </head>
+            <body>
+            <div class="email-container">
+                <div class="email-body">
+                <h3>New donation received:</h3>
+                <br>
+                <p><strong>Full Name:</strong> ' . $fullName . '</p>
+                <p><strong>Email Address:</strong> ' . $emailAddress . '</p>
+                <p><strong>Donation Amount:</strong> ' . $donationAmount . '</p>
+                <p><strong>Purpose of Donation:</strong> ' . $purposeOfDonation . '</p>';
+                
         if (!empty($comment)) {
-            $body .= "Additional Comments: $comment\n";
+            $body .= '<p><strong>Additional Comments:</strong> ' . $comment . '</p>';
         }
 
+        $body .= '
+                </div>
+            </div>
+            </body>
+            </html>';
+
         $mail->Body = $body;
+
 
         // Send email
         if ($mail->send()) {
