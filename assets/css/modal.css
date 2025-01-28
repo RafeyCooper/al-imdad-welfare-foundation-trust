@@ -327,8 +327,7 @@ button {
   background: #f9fafb;
   z-index: 16;
   border-radius: 8px;
-  padding: 10px 20px;
-  ;
+  padding: 20px 20px;
   margin-top: 20px;
   border: 1px solid var(--dark-color);
 }
@@ -356,7 +355,6 @@ button {
   font-weight: 600;
   line-height: 19.364px;
   text-align: left;
-  white-space: nowrap;
   z-index: 18;
 }
 
@@ -404,7 +402,7 @@ button {
 .img {
   width: 96px;
   height: 96px;
-  background: url(../img/fb6875a2fc25e17eebcc2fb486275a5221070576.png) no-repeat center;
+  background: url(../img/jazzcash_qr-code.png) no-repeat center;
   background-size: cover;
   z-index: 26;
   border-radius: 8px;
@@ -429,7 +427,6 @@ button {
   font-weight: 400;
   line-height: 14px;
   text-align: left;
-  white-space: nowrap;
   z-index: 23;
 }
 
@@ -444,7 +441,6 @@ button {
   font-weight: 400;
   line-height: 14px;
   text-align: left;
-  white-space: nowrap;
   z-index: 24;
 }
 
@@ -453,7 +449,7 @@ button {
   background: #f9fafb;
   z-index: 27;
   border-radius: 8px;
-  padding: 10px 20px;
+  padding: 20px 20px;
   margin-top: 20px;
   border: 1px solid var(--dark-color);
 }
@@ -481,7 +477,6 @@ button {
   font-weight: 600;
   line-height: 19.364px;
   text-align: left;
-  white-space: nowrap;
   z-index: 29;
 }
 
@@ -529,7 +524,7 @@ button {
 .img-18 {
   width: 96px;
   height: 96px;
-  background: url(../img/171164b0f8ee03019c1ef10b31fdc6bc19873512.png) no-repeat center;
+  background: url(../img/easypaisa_qr-code.png) no-repeat center;
   background-size: cover;
   z-index: 37;
   border-radius: 8px;
@@ -554,7 +549,6 @@ button {
   font-weight: 400;
   line-height: 14px;
   text-align: left;
-  white-space: nowrap;
   z-index: 34;
 }
 
@@ -569,7 +563,6 @@ button {
   font-weight: 400;
   line-height: 14px;
   text-align: left;
-  white-space: nowrap;
   z-index: 35;
 }
 
@@ -590,7 +583,7 @@ button {
   border-radius: 8px;
 }
 
-.button-19:hover{
+.button-19:hover {
   background-color: var(--dark-color);
 }
 
@@ -611,7 +604,7 @@ button {
   border-radius: 8px;
 }
 
-.button-19-new:hover{
+.button-19-new:hover {
   background-color: var(--dark-color);
 }
 
@@ -771,11 +764,11 @@ textarea:focus {
 
 @keyframes spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
