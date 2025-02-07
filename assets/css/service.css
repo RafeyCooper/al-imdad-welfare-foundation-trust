@@ -12,7 +12,7 @@
 }
 
 .service-bg-container::before {
-    background-image: url(https://www.saylaniwelfare.com/static/media/page_header.ee6c9895d66d7d7cce3a.png);
+    background-image: url('../img/gallery-image/image-2.jpg');
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
