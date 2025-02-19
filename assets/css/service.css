@@ -12,7 +12,7 @@
 }
 
 .service-bg-container::before {
-    background-image: url('../img/gallery-image/image-2.jpg');
+    background-image: url('');
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: cover;

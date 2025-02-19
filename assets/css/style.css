@@ -4,7 +4,7 @@
     --primary-color: #048f40;
     --dark-color: #0e6a47;
     --light-color: #83b757;
-    --test-blur: 7px;
+    --test-blur: 0px;
 }
 
 
@@ -1250,7 +1250,7 @@ footer::before {
 }
 
 .introduction-top-box::before {
-    background-image: url('../img/gallery-image/image-2.jpg');
+    background-image: url('');
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
