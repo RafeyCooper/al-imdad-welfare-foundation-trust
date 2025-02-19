@@ -720,7 +720,7 @@
     border-radius: 10px;
 }
 
-.seven-section-main-box::before {
+/* .seven-section-main-box::before {
     content: "";
     background-image: url("https://www.saylaniwelfare.com/static/media/upcoming_background.a669f19ea2aee3c7e10f.png");
     position: absolute;
@@ -732,7 +732,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 9;
-}
+} */
 
 .wave-cards {
     display: flex;
