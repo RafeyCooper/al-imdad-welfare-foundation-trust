@@ -537,6 +537,7 @@
     display: block;
     width: 100%;
     height: 600px !important;
+    object-fit: contain;
 }
 
 .what-we-doing-heading {
@@ -1297,6 +1298,13 @@ footer::before {
     font-family: "Poppins", serif;
     font-weight: 600;
     font-size: 32px;
+    margin-top: 25px;
+}
+
+.introduction-more .sub-heading {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-size: 22px;
     margin-top: 25px;
 }
 
